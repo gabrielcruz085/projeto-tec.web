@@ -1,26 +1,26 @@
-# 🎮 GameVerdict:
+#  GameVerdict:
 
 > Um portal pessoal de análises de jogos focado em experiência, opinião real e desempenho técnico de hardware.
 
 ---
 
-## 📌 Sobre o Projeto:
+##  Sobre o Projeto:
 O **GameVerdict** é um projeto acadêmico estruturado como um blog/portal de análises personalizadas de jogos. A proposta principal é registrar a minha experiência e opinião sincera sobre os títulos que já joguei, avaliando critérios artísticos e técnicos, além de documentar fielmente como cada jogo se comportou e rodou nas minhas configurações de hardware atuais.
 
 ---
 
-## 👥 Aluno Envolvido:
+##  Aluno Envolvido:
 * **Aluno :** Gabriel Sóstomo Santos Cruz
 
 
 ---
 
-## 💡 Motivação:
+##  Motivação:
 O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os jogos que já joguei, servindo como um espaço para registrar minhas impressões reais de gameplay. Além disso, a ideia é que essas análises possam incentivar outras pessoas a conhecerem novos títulos e dar uma chance para os jogos que foram avaliados aqui.
 
 ---
 
-## 🚀 Funcionalidades Previstas:
+##  Funcionalidades Previstas:
 
 ### Fase 1 (Escopo Atual - Foco Pessoal)
 * **Catálogo de Jogos:** Listagem dos jogos que já joguei e analisei.
@@ -39,6 +39,6 @@ O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas:
+##  Tecnologias Utilizadas:
 * **Front-end:** HTML5, CSS3, JavaScript
 * **Controle de Versão:** Git e GitHub
