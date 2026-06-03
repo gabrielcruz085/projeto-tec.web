@@ -10,12 +10,12 @@ O **GameVerdict** é um projeto acadêmico estruturado como um blog/portal de an
 ---
 
 ## 👥 Aluno Envolvido:
-* **Aluno 1:**: Gabriel Sóstomo Santos Cruz
+* **Aluno 1:** Gabriel Sóstomo Santos Cruz
 
 
 ---
 
-## 💡 Motivação;
+## 💡 Motivação:
 O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os jogos que já joguei, servindo como um espaço para registrar minhas impressões reais de gameplay. Além disso, a ideia é que essas análises possam incentivar outras pessoas a conhecerem novos títulos e dar uma chance para os jogos que foram avaliados aqui.
 
 ---
