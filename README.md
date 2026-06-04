@@ -41,4 +41,5 @@ O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os 
 
 ##  Tecnologias Utilizadas:
 * **Front-end:** HTML5, CSS3, JavaScript
+* **Banco de Dados / API:** (A definir na Fase 2 para persistência de dados dos usuários)
 * **Controle de Versão:** Git e GitHub
