@@ -7,6 +7,7 @@ const jogos = [
     dificuldadeJogo: "Média",
     tempoJogado: "354 horas",
     conquistasObtidas: "78 / 78 (100%)",
+    resenha: "Simplesmente impecável. A riqueza de detalhes do mundo, a profundidade das missões secundárias e o carisma de Geralt tornam este o melhor RPG já feito. Uma experiência obrigatória para qualquer fã de videogames.",
     graficos: "Incríveis! Mesmo sendo um jogo de 2015, até hoje é difícil encontrar um título tão completo, detalhado e envolvente.",
     combate: "Incríveis e dinâmicos! Oferece uma enorme variedade de recursos para usar em batalha, como os Sinais de Bruxo, óleos para lâminas, elixires, bombas e esquivas precisas.",
     dublagem: "Excelente localização para o português brasileiro, com pouquíssimas falhas. Traz diálogos muito naturais, humor afiado, piadas marcantes e vocabulário adulto (+18) que trazem extrema imersão.",
@@ -38,6 +39,7 @@ const jogos = [
     dificuldadeJogo: "Alta",
     tempoJogado: "120 horas",
     conquistasObtidas: "25 / 42 (59%)",
+    resenha: "Uma obra-prima do gênero Soulslike. A transição para o mundo aberto foi feita de forma genial, oferecendo sensação de descoberta constante e batalhas marcantes contra chefes colossais.",
     graficos: "Direção de arte espetacular com cenários marcantes e marcante otimização visual.",
     combate: "Combate preciso, desafiador e com grande variedade de mecânicas, magias e armas.",
     dublagem: "Atuação de voz impecável em inglês com trilha sonora marcante nas batalhas.",
@@ -60,6 +62,7 @@ const jogos = [
     dificuldadeJogo: "Média",
     tempoJogado: "147 horas",
     conquistasObtidas: "37 / 37 (100%)",
+    resenha: "Uma reinvenção perfeita da franquia. O combate visceral com o machado Leviathan somado à jornada emocionante entre Kratos e Atreus criam um dos jogos mais marcantes da geração.",
     graficos: "Incríveis! A ambientação na mitologia nórdica é rica em detalhes, com cenários deslumbrantes e direção de arte espetacular.",
     combate: "Incríveis e extremamente satisfatórios! O Leviathan Axe tem uma física perfeita ao ser arremessado e chamado de volta, criando confrontos viscerais.",
     dublagem: "Dublagem impecável em português brasileiro, com atuação marcante e imersiva para o Kratos e o Atreus.",
@@ -89,6 +92,7 @@ const jogos = [
     dificuldadeJogo: "Média",
     tempoJogado: "80 horas",
     conquistasObtidas: "28 / 36 (77%)",
+    resenha: "Um espetáculo do começo ao fim. Consegue expandir tudo o que o anterior fez de bom, trazendo mais escala, batalhas épicas nos nove reinos e um desfecho emocionante para a saga nórdica.",
     graficos: "Incríveis! Conseguiu superar o jogo de 2018 em escala, variedade dos nove reinos e nível de detalhes visuais.",
     combate: "Incrível e ainda superior ao anterior! A adição de novas mecânicas, armas e maior mobilidade deixaram as batalhas ainda mais fluidas e variadas.",
     dublagem: "Excelente localização para o português, mantendo a dramaticidade e qualidade máxima no ápice da saga nórdica.",
@@ -111,13 +115,14 @@ const jogos = [
     dificuldadeJogo: "Média",
     tempoJogado: "55 horas",
     conquistasObtidas: "29 / 29 (100%)",
+    resenha: "A versão definitiva de uma das maiores narrativas dos games. O ritmo da história, a tensão na exploração e a relação de Joel e Ellie continuam emocionando como na primeira vez.",
     graficos: "Excelentes! O remake entregou uma reconstrução visual impressionante com iluminação realista e modelos de personagens muito detalhados.",
     combate: "Incrível! A mistura de stealth, escassez de recursos e tiroteios tensos cria uma atmosfera de sobrevivência constante.",
     dublagem: "Dublagem em português clássica e impecável, transmitindo toda a emoção e peso dramático da história de Joel e Ellie.",
     pros: [
       "História emocionante que continua sendo uma das melhores produções dos videogames",
       "Visual totalmente reformulado em motor gráfico moderno",
-      "Atmosfera de sobrevivência highly imersiva"
+      "Atmosfera de sobrevivência altamente imersiva"
     ],
     contras: [
       "Otimização exigente no PC, cobrando bastante do hardware"
@@ -139,6 +144,7 @@ const jogos = [
     dificuldadeJogo: "Média",
     tempoJogado: "35 horas",
     conquistasObtidas: "22 / 41 (53%)",
+    resenha: "Acabei gostando um pouco mais do 2 do que do 1, principalmente pela evolução absurda na gameplay, combate e por mostrar a perspectiva e o lado de cada personagem na história.",
     graficos: "Excelentes! As animações corporais, expressões faciais e ambientação pós-apocalíptica estão no patamar mais alto da indústria.",
     combate: "Incrível e refinado! A adição da esquiva, capacidade de se deitar e esconder na grama alta elevaram a gameplay a outro nível de tensão.",
     dublagem: "Atuação de voz e dublagem em português excepcionais, mantendo o realismo e a carga dramática de cada cena.",
@@ -150,7 +156,7 @@ const jogos = [
     contras: [
       "Exige hardware atualizado e ajustes manuais nas opções visuais para manter boa performance"
     ],
-    desempenho: "Rodou nas configurações no Mínimo entre 40 a 50 FPS. Resenha: Acabei gostando um pouco mais do 2 do que do 1, principalmente pela evolução na gameplay e por mostrar a perspectiva e o lado de cada personagem na história.",
+    desempenho: "Rodou nas configurações no Mínimo entre 40 a 50 FPS.",
     variaveisBusca: ["tlou 2", "tl2", "tlou part 2", "the last of us 2"]
   },
   {
@@ -161,6 +167,7 @@ const jogos = [
     dificuldadeJogo: "Fácil",
     tempoJogado: "13 horas",
     conquistasObtidas: "18 / 50 (36%)",
+    resenha: "Uma ótima nostalgia para os fãs do anime, adaptando o arco do Pain com fidelidade. Apesar do combate ser mais simples em relação aos posteriores, continua muito divertido.",
     graficos: "Bons! A arte em cel-shading recria fielmente o estilo do anime e envelheceu super bem.",
     combate: "Legal! É divertido, porém as mecânicas de jogo e combate ainda não são tão fluidas quanto nos títulos posteriores da franquia.",
     dublagem: "Vozes originais marcantes em japonês e inglês com ótima interpretação dos personagens do anime.",
@@ -183,6 +190,7 @@ const jogos = [
     dificuldadeJogo: "Fácil",
     tempoJogado: "28 horas",
     conquistasObtidas: "55 / 55 (100%)",
+    resenha: "Uma evolução gigante em relação ao 2. O combate ficou muito mais dinâmico e as lutas cinematográficas de chefes durante a Quarta Guerra Ninja são um espetáculo à parte.",
     graficos: "Bons e expressivos! O estilo cel-shading continua lindo e se destaca bastante nas lutas cinematográficas de chefes.",
     combate: "Muito bom! Corrigiram e melhoraram muito as mecânicas de combate do 2 para o 3, trazendo lutas mais dinâmicas e fluidas.",
     dublagem: "Excelente dublagem em japonês e inglês com toda a emoção e peso dos momentos decisivos da Quarta Guerra Ninja.",
@@ -212,6 +220,7 @@ const jogos = [
     dificuldadeJogo: "Média / Fácil",
     tempoJogado: "60 horas",
     conquistasObtidas: "50 / 50 (100%)",
+    resenha: "O ápice dos jogos de luta de anime. Com a troca livre de personagens em batalha e gráficos espetaculares, é disparado o título mais completo e divertido de toda a franquia.",
     graficos: "Incríveis! Os efeitos de jutsus, quebra de cenários e animações dos deuses tornam este o jogo mais lindo da franquia.",
     combate: "Ótimo e definitivo! A mecânica de trocar de personagem durante os combos e o ritmo acelerado deixaram a gameplay sensacional.",
     dublagem: "Ótima! Conta inclusive com dublagem oficial em português brasileiro com os dubladores clássicos do anime.",
@@ -242,7 +251,6 @@ const inputBusca = document.getElementById("campo-busca");
 const contadorJogos = document.getElementById("total-jogos");
 const contadorPlatinas = document.getElementById("total-platinas");
 
-// Inserção automática do banner de aviso acima do campo de pesquisa
 if (inputBusca) {
   const avisoBusca = document.createElement("div");
   avisoBusca.className = "aviso-biblioteca-atualizacao";
@@ -437,6 +445,10 @@ function renderizarJogos(lista, termoBusca = "") {
         <div class="criterion">
           <h4>🎙️ Dublagem & Sonoplastia</h4>
           <p>${jogo.dublagem}</p>
+        </div>
+        <div class="criterion">
+          <h4>💬 Opinião / Resenha</h4>
+          <p>${jogo.resenha}</p>
         </div>
         <div class="pros-cons">
           <div class="pros">
