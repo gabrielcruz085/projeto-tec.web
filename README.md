@@ -22,7 +22,7 @@ O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os 
 
 ##  Funcionalidades Previstas:
 
-### Fase 1 (Escopo Atual - Foco Pessoal)
+
 * **Catálogo de Jogos:** Listagem dos jogos que já joguei e analisei.
 * **Minha Análise Detalhada:** Cada jogo contará com uma avaliação detalhada contendo:
   * **Gráficos:** Opinião sobre o visual, direção de arte e otimização visual.
@@ -30,16 +30,14 @@ O projeto nasceu a fim de compartilhar minhas opiniões e avaliações sobre os 
   * **Dublagem / Sonoplastia:** Avaliação das vozes, localização e imersão sonora.
   * **Pontos Positivos:** O que o jogo tem de melhor e mais marcante.
   * **Pontos Negativos:** Problemas, bugs ou escolhas de design que deixaram a desejar.
+  * **opnião/resenha:** minha opnião pessoal sobre o jogo.
 * **Relatório de Desempenho (Meu Hardware):** Apresentação das minhas configurações (Processador, Placa de Vídeo, RAM) e um relatório de como o jogo rodou (taxa de quadros/FPS, engasgos, estabilidade).
 
-### Fase 2 (Próximos Passos - Interação com o Usuário):
-* **Espaço da Comunidade:** Permitir que os visitantes interajam enviando o que acharam do jogo e acrescentando suas próprias análises.
-* **Compartilhamento de Setups:** Uma funcionalidade para o usuário relatar como aquele mesmo jogo rodou nas configurações de hardware dele.
-* **Central de Dúvidas:** Fórum ou campo de perguntas para usuários tirarem dúvidas sobre desempenho, bugs ou dicas do jogo.
+
 
 ---
 
 ##  Tecnologias Utilizadas:
 * **Front-end:** HTML5, CSS3, JavaScript
-* **Banco de Dados / API:** (A definir na Fase 2 para persistência de dados dos usuários)
+
 * **Controle de Versão:** Git e GitHub
