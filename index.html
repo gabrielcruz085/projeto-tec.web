@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVerdict | Análises & Desempenho</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">🎮 GameVerdict</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">🏠 Início</a></li>
+      <li><a href="#meu-setup">💻 Meu Setup</a></li>
+      <li><a href="#lista-de-platinas">🏆 Platinas</a></li>
+      <li><a href="#lista-de-jogos">🔍 Análises</a></li>
+      <li><a href="sobre.html">ℹ️ Sobre</a></li>
+      <li><a href="login.html" class="btn-nav-login">👤 Entrar</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section id="home" class="hero-lobby">
+    <div class="lobby-container">
+      <span class="lobby-badge">🎮 Portal Pessoal de Análises & Hardware</span>
+      <h1>Bem-vindo ao <span class="highlight">GameVerdict</span></h1>
+      <p class="tagline">Um portal focado em opiniões sinceras de jogos e testes de desempenho técnico em hardware gamer.</p>
+
+      <div class="lobby-grid">
+        <div class="info-card">
+          <h3>📌 Sobre o Portal</h3>
+          <p>
+            O <strong>GameVerdict</strong> é um portal pessoal de análises de jogos. 
+            A proposta é registrar a minha experiência e opinião sincera sobre os títulos que joguei, 
+            avaliando critérios artísticos, técnicos e o desempenho real no meu setup.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>💡 Motivação</h3>
+          <p>
+            Compartilhar avaliações reais de gameplay para incentivar outros jogadores a conhecerem novos títulos 
+            e darem uma chance aos jogos avaliados, além de servir como guia prático de desempenho.
+          </p>
+        </div>
+      </div>
+
+      <div class="lobby-footer">
+        <div class="author-tag">
+          👤 <strong>Criador & Autor:</strong> Gabriel Sóstomo Santos Cruz
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="meu-setup" class="hardware-card">
+  <h2>💻 Meu Setup de Testes (Lenovo IdeaPad Gaming 3i)</h2>
+  <div class="specs-grid">
+    <div class="spec-item"><strong>CPU:</strong> Intel Core i5-10300H</div>
+    <div class="spec-item"><strong>GPU:</strong> GTX 1650 4GB GDDR6</div>
+    <div class="spec-item"><strong>RAM:</strong> 16GB DDR4 (Dual Channel)</div>
+    <div class="spec-item"><strong>Armazenamento:</strong> SSD NVMe 768GB (256GB + 512GB)</div>
+  </div>
+</section>
+
+    <section id="platinas" class="platinas-section">
+      <div class="section-header">
+        <h2>🏆 Minhas Platinas (100% Concluídos)</h2>
+        <span id="total-platinas" class="stats-counter gold-counter">0 Platinas</span>
+      </div>
+      <div id="lista-de-platinas" class="platinas-grid"></div>
+    </section>
+
+    <section id="analises" class="reviews-section">
+      <div class="reviews-header">
+        <h2>🕹️ Análises Recentes</h2>
+        <span id="total-jogos" class="stats-counter">0 jogos analisados</span>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="campo-busca" placeholder="🔍 Pesquisar jogo por título...">
+      </div>
+
+      <div id="lista-de-jogos"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 GameVerdict - Todos os direitos reservados a Gabriel Cruz.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
