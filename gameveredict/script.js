@@ -3,7 +3,7 @@ const jogos = [
     id: 1,
     titulo: "The Witcher 3: Wild Hunt",
     nota: "10/10",
-    imagem: "./capas/Witcher3.png",
+    imagem: "./capas/witcher3.png",
     dificuldadeJogo: "Média",
     tempoJogado: "354 horas",
     conquistasObtidas: "78 / 78 (100%)",
