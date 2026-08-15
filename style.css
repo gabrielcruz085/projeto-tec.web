@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estrutura Flexbox para manter o rodapé sempre na base */
 body {
   background-color: #0f0f12;
   color: #e2e8f0;
@@ -19,7 +18,6 @@ body {
   flex-direction: column;
 }
 
-/* Garante que o conteúdo principal ocupe o espaço restante */
 main, .container {
   flex: 1;
 }
@@ -695,7 +693,6 @@ header {
   box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
 }
 
-/* --- RODAPÉ SIMPLIFICADO E CENTRALIZADO --- */
 footer {
   text-align: center;
   padding: 0.8rem 1rem;
@@ -782,7 +779,6 @@ header a:hover, nav a:hover {
   text-decoration: none !important;
 }
 
-/* --- ÁREA DE LOGIN E SOBRE (CARD LED COM ANIMAÇÃO DE CRESCIMENTO) --- */
 .login-container, .about-section {
   max-width: 480px;
   margin: 2rem auto;
@@ -866,7 +862,6 @@ header a:hover, nav a:hover {
   box-shadow: 0 0 18px rgba(139, 92, 246, 0.6);
 }
 
-/* --- BOTÃO HAMBÚRGUER (Escondido no Computador) --- */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -922,5 +917,42 @@ header a:hover, nav a:hover {
 
   .navbar ul.nav-links a:hover {
     background-color: #27272a;
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  .container, 
+  .hero-lobby {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lobby-grid,
+  .specs-grid,
+  .platinum-stats-grid,
+  .review-stats-bar,
+  .pros-cons {
+    grid-template-columns: 1fr;
+  }
+
+  .login-container, 
+  .about-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+
+  .info-card:hover,
+  .hardware-card:hover,
+  .platinum-card:hover,
+  .review-card:hover,
+  .login-container:hover,
+  .about-section:hover {
+    transform: translateY(-2px);
   }
 }

@@ -290,7 +290,6 @@ function calcularDistancia(a, b) {
   return matrix[b.length][a.length];
 }
 
-// Nova função: Retorna até 3 opções de jogos correspondentes
 function buscarSugestoes(termo, maxSugestoes = 3) {
   const termoClean = termo.toLowerCase().trim();
   if (!termoClean) return [];
