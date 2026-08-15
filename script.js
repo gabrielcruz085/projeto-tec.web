@@ -247,11 +247,11 @@ const jogos = [
 
 const containerJogos = document.getElementById("lista-de-jogos");
 const containerPlatinas = document.getElementById("lista-de-platinas");
-const inputBusca = document.getElementById("campo-busca");
+const inputBusca = document.getElementById("campo-busca") || document.getElementById("input-busca");
 const contadorJogos = document.getElementById("total-jogos");
 const contadorPlatinas = document.getElementById("total-platinas");
 
-if (inputBusca) {
+if (inputBusca && inputBusca.parentNode) {
   const avisoBusca = document.createElement("div");
   avisoBusca.className = "aviso-biblioteca-atualizacao";
   avisoBusca.innerHTML = `
@@ -290,12 +290,12 @@ function calcularDistancia(a, b) {
   return matrix[b.length][a.length];
 }
 
-function buscarSugestao(termo) {
+// Nova função: Retorna até 3 opções de jogos correspondentes
+function buscarSugestoes(termo, maxSugestoes = 3) {
   const termoClean = termo.toLowerCase().trim();
-  if (!termoClean) return null;
+  if (!termoClean) return [];
 
-  let melhorJogo = null;
-  let menorDistancia = Infinity;
+  const candidatos = [];
 
   jogos.forEach(jogo => {
     const termosParaTestar = [
@@ -303,11 +303,12 @@ function buscarSugestao(termo) {
       ...(jogo.variaveisBusca || []).map(v => v.toLowerCase())
     ];
 
+    let menorDistanciaJogo = Infinity;
+
     termosParaTestar.forEach(tituloClean => {
       const distCompleta = calcularDistancia(termoClean, tituloClean);
-      if (distCompleta < menorDistancia && distCompleta <= 4) {
-        menorDistancia = distCompleta;
-        melhorJogo = jogo.titulo;
+      if (distCompleta < menorDistanciaJogo) {
+        menorDistanciaJogo = distCompleta;
       }
 
       const palavrasTitulo = tituloClean.split(/[\s:-]+/);
@@ -319,17 +320,32 @@ function buscarSugestao(termo) {
             const dist = calcularDistancia(pTermo, pTitulo);
             const limiteTolerado = Math.max(1, Math.floor(pTitulo.length / 3));
 
-            if (dist <= limiteTolerado && dist < menorDistancia) {
-              menorDistancia = dist;
-              melhorJogo = jogo.titulo;
+            if (dist <= limiteTolerado && dist < menorDistanciaJogo) {
+              menorDistanciaJogo = dist;
             }
           }
         });
       });
     });
+
+    if (menorDistanciaJogo <= 4) {
+      candidatos.push({
+        titulo: jogo.titulo,
+        distancia: menorDistanciaJogo
+      });
+    }
   });
 
-  return melhorJogo;
+  candidatos.sort((a, b) => a.distancia - b.distancia);
+
+  const titulosUnicos = [];
+  candidatos.forEach(c => {
+    if (!titulosUnicos.includes(c.titulo)) {
+      titulosUnicos.push(c.titulo);
+    }
+  });
+
+  return titulosUnicos.slice(0, maxSugestoes);
 }
 
 function renderizarPlatinas() {
@@ -387,16 +403,29 @@ function renderizarPlatinas() {
 }
 
 function renderizarJogos(lista, termoBusca = "") {
+  if (!containerJogos) return;
   containerJogos.innerHTML = "";
 
   if (lista.length === 0) {
-    const sugestao = termoBusca ? buscarSugestao(termoBusca) : null;
+    const sugestoes = termoBusca ? buscarSugestoes(termoBusca) : [];
     
     let mensagem = `<div class="sem-resultados">
       <p>⚠️ Nenhum jogo encontrado para "<strong>${termoBusca}</strong>".</p>`;
     
-    if (sugestao) {
-      mensagem += `<p class="sugestao-texto">Você quis dizer <span class="sugestao-link" onclick="aplicarSugestao('${sugestao}')">${sugestao}</span>?</p>`;
+    if (sugestoes.length > 0) {
+      const links = sugestoes.map(
+        s => `<span class="sugestao-link" onclick="aplicarSugestao('${s.replace(/'/g, "\\'")}')">${s}</span>`
+      );
+
+      let fraseSugestao = "";
+      if (links.length === 1) {
+        fraseSugestao = `Você quis dizer ${links[0]}?`;
+      } else {
+        const ultimo = links.pop();
+        fraseSugestao = `Você quis dizer ${links.join(", ")} ou ${ultimo}?`;
+      }
+
+      mensagem += `<p class="sugestao-texto">${fraseSugestao}</p>`;
     }
 
     mensagem += `</div>`;
@@ -488,14 +517,16 @@ window.irParaAnalise = function(idJogo) {
 window.abrirImagemModal = function(src, alt) {
   const modal = document.getElementById("image-modal");
   const modalImg = document.getElementById("modal-img");
-  modalImg.src = src;
-  modalImg.alt = alt;
-  modal.classList.add("active");
+  if (modal && modalImg) {
+    modalImg.src = src;
+    modalImg.alt = alt;
+    modal.classList.add("active");
+  }
 };
 
 window.fecharImagemModal = function() {
   const modal = document.getElementById("image-modal");
-  modal.classList.remove("active");
+  if (modal) modal.classList.remove("active");
 };
 
 document.addEventListener("click", (e) => {
@@ -508,11 +539,13 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.aplicarSugestao = function(nomeJogo) {
-  inputBusca.value = nomeJogo;
-  inputBusca.dispatchEvent(new Event('input'));
+  if (inputBusca) {
+    inputBusca.value = nomeJogo;
+    inputBusca.dispatchEvent(new Event('input'));
+  }
 };
 
-inputBusca.addEventListener("input", (e) => {
+function processarBusca(e) {
   const termo = e.target.value.toLowerCase().trim();
   
   if (termo === "") {
@@ -527,7 +560,41 @@ inputBusca.addEventListener("input", (e) => {
   });
 
   renderizarJogos(jogosFiltrados, termo);
-});
+}
+
+if (inputBusca) {
+  inputBusca.addEventListener("input", processarBusca);
+  inputBusca.addEventListener("search", processarBusca);
+}
 
 renderizarPlatinas();
 renderizarJogos(jogos);
+
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    const icon = menuToggle.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    } else {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+}

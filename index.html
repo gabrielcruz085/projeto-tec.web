@@ -6,19 +6,29 @@
   <title>GameVerdict | Análises & Desempenho</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" href="capas/favicon.png">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <header>
   <nav class="navbar">
-    <div class="logo">🎮 GameVerdict</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">🏠 Início</a></li>
-      <li><a href="#meu-setup">💻 Meu Setup</a></li>
-      <li><a href="#lista-de-platinas">🏆 Platinas</a></li>
-      <li><a href="#lista-de-jogos">🔍 Análises</a></li>
-      <li><a href="sobre.html">ℹ️ Sobre</a></li>
-      <li><a href="login.html" class="btn-nav-login">👤 Entrar</a></li>
+    <a href="index.html" class="logo">
+      <img src="capas/favicon.png" alt="Logo GameVerdict" class="logo-icon">
+      <span>GameVerdict</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Início</a></li>
+      <li><a href="#meu-setup"><i class="fa-solid fa-desktop"></i> Meu Setup</a></li>
+      <li><a href="#lista-de-platinas"><i class="fa-solid fa-trophy"></i> Platinas</a></li>
+      <li><a href="#lista-de-jogos"><i class="fa-solid fa-magnifying-glass"></i> Análises</a></li>
+      <li><a href="sobre.html"><i class="fa-solid fa-circle-info"></i> Sobre</a></li>
+      <li><a href="login.html" class="btn-nav-login"><i class="fa-solid fa-user"></i> Entrar</a></li>
     </ul>
   </nav>
 </header>
@@ -58,14 +68,14 @@
 
   <main class="container">
     <section id="meu-setup" class="hardware-card">
-  <h2>💻 Meu Setup de Testes (Lenovo IdeaPad Gaming 3i)</h2>
-  <div class="specs-grid">
-    <div class="spec-item"><strong>CPU:</strong> Intel Core i5-10300H</div>
-    <div class="spec-item"><strong>GPU:</strong> GTX 1650 4GB GDDR6</div>
-    <div class="spec-item"><strong>RAM:</strong> 16GB DDR4 (Dual Channel)</div>
-    <div class="spec-item"><strong>Armazenamento:</strong> SSD NVMe 768GB (256GB + 512GB)</div>
-  </div>
-</section>
+      <h2>💻 Meu Setup de Testes (Lenovo IdeaPad Gaming 3i)</h2>
+      <div class="specs-grid">
+        <div class="spec-item"><strong>CPU:</strong> Intel Core i5-10300H</div>
+        <div class="spec-item"><strong>GPU:</strong> GTX 1650 4GB GDDR6</div>
+        <div class="spec-item"><strong>RAM:</strong> 16GB DDR4 (Dual Channel)</div>
+        <div class="spec-item"><strong>Armazenamento:</strong> SSD NVMe 768GB (256GB + 512GB)</div>
+      </div>
+    </section>
 
     <section id="platinas" class="platinas-section">
       <div class="section-header">
@@ -82,7 +92,7 @@
       </div>
 
       <div class="search-container">
-        <input type="text" id="campo-busca" placeholder="🔍 Pesquisar jogo por título...">
+        <input type="search" placeholder="🔍 Pesquisar jogo por título..." id="input-busca">
       </div>
 
       <div id="lista-de-jogos"></div>
@@ -90,8 +100,9 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 GameVerdict - Todos os direitos reservados a Gabriel Cruz.</p>
-  </footer>
+    <footer>
+  <p>&copy; 2026 - <strong>GameVerdict</strong>. Todos os direitos reservados a Gabriel Cruz.</p>
+</footer>
 
   <script src="./script.js"></script>
 </body>

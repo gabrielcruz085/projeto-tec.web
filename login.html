@@ -3,44 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Biblioteca de Jogos</title>
+  <title>Login - GameVerdict</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">🎮 GameLibrary</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="login.html" class="active">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="login-page">
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo" title="GameVerdict - Página Inicial">
+      <img src="capas/favicon.png" alt="Logo GameVerdict" class="site-logo">
+      <span>GameVerdict</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="login.html"><i class="fas fa-user"></i> Entrar</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main class="container">
     <section class="login-container">
-      <h2>Área de Membro</h2>
-      <p>Acesse sua conta para salvar platinas e personalizar sua biblioteca.</p>
+      <h2><i class="fa-solid fa-user-shield"></i> Área de Membro</h2>
+      <p>Acesse sua conta para gerenciar análises e salvar platinas no <strong>GameVerdict</strong>.</p>
       
-      <form class="login-form" onsubmit="event.preventDefault(); alert('Login demonstrativo realizado!');">
+      <form class="login-form" onsubmit="event.preventDefault(); alert('Login demonstrativo realizado com sucesso!');">
         <div class="form-group">
-          <label for="email">E-mail ou Usuário</label>
+          <label for="email"><i class="fa-solid fa-envelope"></i> E-mail ou Usuário</label>
           <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
         </div>
         
         <div class="form-group">
-          <label for="senha">Senha</label>
+          <label for="senha"><i class="fa-solid fa-key"></i> Senha</label>
           <input type="password" id="senha" placeholder="Digite sua senha" required>
         </div>
 
-        <button type="submit" class="btn-login">Entrar</button>
+        <button type="submit" class="btn-login"><i class="fa-solid fa-right-to-bracket"></i> Entrar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 - Biblioteca de Jogos & Platinas. Todos os direitos reservados.</p>
+    <p>&copy; 2026 - <strong>GameVerdict</strong>. Todos os direitos reservados a Gabriel Cruz.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -5,48 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - GameVerdict</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
   <header>
     <nav class="navbar">
-      <div class="logo">🎮 GameVerdict</div>
-      <ul class="nav-links">
-        <li><a href="index.html">🏠 Início</a></li>
-        <li><a href="sobre.html" class="active">ℹ️ Sobre</a></li>
-        <li><a href="login.html">👤 Entrar</a></li>
+      <a href="index.html" class="logo" title="GameVerdict - Página Inicial">
+        <img src="capas/favicon.png" alt="Logo GameVerdict" class="site-logo" onerror="this.style.display='none'">
+        <span>GameVerdict</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="sobre.html" class="active"><i class="fa-solid fa-circle-info"></i> Sobre</a></li>
+        <li><a href="login.html"><i class="fa-solid fa-user"></i> Entrar</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
     <section class="about-section">
-      <h2>🎮 GameVerdict - Portal Pessoal de Análises & Hardware</h2>
-      <p style="margin-bottom: 1.5rem; color: #ccc;">
+      <h2><i class="fa-solid fa-gamepad"></i> GameVerdict - Portal Pessoal de Análises & Hardware</h2>
+      <p style="margin-bottom: 1.5rem; color: #a1a1aa;">
         O <strong>GameVerdict</strong> é um portal pessoal focado em opiniões sinceras sobre jogos e testes práticos de desempenho técnico em hardware gamer.
       </p>
 
       <div class="about-cards">
         <div class="about-card">
-          <h3>📌 Sobre o Portal</h3>
+          <h3><i class="fa-solid fa-thumbtack"></i> Sobre o Portal</h3>
           <p>A proposta é registrar a experiência e opinião sincera sobre os títulos jogados, avaliando critérios artísticos, técnicos e o desempenho real no setup de testes.</p>
         </div>
 
         <div class="about-card">
-          <h3>💡 Motivação</h3>
+          <h3><i class="fa-solid fa-lightbulb"></i> Motivação</h3>
           <p>Compartilhar avaliações reais de gameplay para incentivar outros jogadores a conhecerem novos títulos e darem uma chance aos jogos avaliados, além de servir como guia prático de desempenho.</p>
         </div>
 
         <div class="about-card">
-          <h3>👤 Criador & Autor</h3>
+          <h3><i class="fa-solid fa-user"></i> Criador & Autor</h3>
           <p><strong>Gabriel Sóstomo Santos Cruz</strong><br>Desenvolvedor e entusiasta de hardware & jogos.</p>
         </div>
       </div>
 
-      <div style="margin-top: 2rem; background: #12121c; padding: 1.5rem; border-radius: 8px; border: 1px solid #2a2a3a;">
-        <h3 style="color: #ffc107; margin-bottom: 1rem;">💻 Setup de Testes Principal</h3>
+      <div style="margin-top: 2rem; background: #12121c; padding: 1.5rem; border-radius: 8px; border: 1px solid #27272a;">
+        <h3 style="color: #a78bfa; margin-bottom: 1rem;"><i class="fa-solid fa-laptop"></i> Setup de Testes Principal</h3>
         <p style="margin-bottom: 0.5rem;"><strong>Modelo:</strong> Lenovo IdeaPad Gaming 3i</p>
-        <ul style="padding-left: 1.2rem; color: #ddd; font-size: 0.95rem;">
+        <ul style="padding-left: 1.2rem; color: #d1d5db; font-size: 0.95rem;">
           <li><strong>CPU:</strong> Intel Core i5-10300H</li>
           <li><strong>GPU:</strong> NVIDIA GeForce GTX 1650 4GB GDDR6</li>
           <li><strong>RAM:</strong> 16GB DDR4 (Dual Channel)</li>
@@ -57,8 +66,9 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 - GameVerdict | Criado por Gabriel Sóstomo Santos Cruz. Todos os direitos reservados.</p>
+    <p>&copy; 2026 - <strong>GameVerdict</strong>. Todos os direitos reservados a Gabriel Cruz.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
